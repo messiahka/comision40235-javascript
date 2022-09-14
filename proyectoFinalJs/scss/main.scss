@@ -1,0 +1,593 @@
+@import 'variables';
+@import 'maps';
+@import 'normalize';
+@import 'mixins';
+
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: map-get($color, primary);
+}
+
+#wrapper {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "imagenfondo"
+    "cartel"
+    "burgas"
+    "footer";
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100vh;
+}
+
+// HEADER
+
+header {
+  grid-area: header;
+  background-image: url(../img/tramaHeader.png);
+  background-repeat: repeat;
+  background-color: map-get($color, secondary);
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_item {
+  display: flex;
+}
+
+a {
+  font-size: $font-medium;
+  margin: 0 1.5rem;
+}
+
+.logo_header {
+  width: 15rem;
+  padding: 1em;
+  margin: 2em;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $text-color-tertiary;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  text-decoration: none;
+  color: $text-color-primary;
+  transition: all 0.25s;
+}
+
+// FIN HEADER
+
+// HAMBURGUESA FONDO
+
+#HamburguesaFondo {
+  grid-area: imagenfondo;
+  background-color: map-get($color, primary);
+  @include flex (row, center, center)
+}
+
+// FIN HAMBURGUESA FONDO
+
+// CARTEL PORTADA
+
+section#Cartel {
+  grid-area: cartel;
+  background-color: map-get($color, primary);
+  @include flex (row, center, center)
+}
+
+// FIN CARTEL PORTADA
+
+// MUESTRA DE HAMBURGUESAS
+
+section#burguershow {
+  grid-area: burgas;
+  background-color: map-get($color, primary);
+  @include flex (column, center, center)
+}
+
+.hamburguers {
+  @include flex (row, space-around, center);
+  flex-wrap: wrap
+}
+
+.burguer_image {
+  width: 30rem;
+  margin: 3rem;
+  @include flex (column, center, center);
+
+  img {
+    width: 30rem;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.10);
+      transition: all 1s;
+    }
+  }
+
+  h2 {
+    font-size: $font-medium;
+    color: map-get($color, secondary);
+  }
+
+  p {
+    font-size: $font-small;
+    padding: 1em;
+    color: map-get($color, secondary);
+  }
+}
+
+// FIN DE MUESTRA DE HAMBURGUESAS
+
+// MENU - HAMBURGUESAS A LA VENTA
+
+#wrapper2 {
+  background-color: map-get($color, primary);
+}
+
+h1 {
+  @include flex (row, center, center);
+  margin: 1em;
+  color: black;
+  text-decoration: underline;
+  font-size: $font-large;
+}
+
+.ofertas {
+  @include flex (row, center, center);
+  font-size: $font-medium;
+}
+
+#promotion img {
+  width: 30rem;
+  height: 30rem;
+}
+
+.hamburguers_menu {
+  @include flex (row, center, center);
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  margin-bottom: 1.5em;
+
+}
+.hamburguer {
+  @include flex (column, center, center);
+  border: 2px solid black;
+  margin: 1em;
+  width: 30em;
+  height: 30em;
+  border-radius: 1em;
+}
+
+#promotion:hover {
+  background: #730E16;
+  transform: scale(1.07);
+  transition: all 1s;
+  border-radius: 2em;
+}
+
+.hamburguer a {
+ @include flex (row, center, none)
+}
+
+
+.hamburguer:hover {
+  background: black;
+  transform: scale(1.07);
+  transition: all 1s;
+  border-radius: 2em;
+}
+
+.hamburguer:hover h2, p {
+  color: white;
+}
+
+.hamburguer:hover p {
+  color: white;
+}
+
+.hamburguer img {
+  display: flex;
+  align-self: center;
+  width: 70%;
+}
+
+.hamburguer h2 {
+  display: flex;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: $font-medium;
+  color: map-get($color, secondary);
+}
+
+.hamburguer p {
+  display: flex;
+  align-self: center;
+  padding: 5px;
+  color: map-get($color, secondary);
+}
+
+// FIN HAMBURGUESAS A LA VENTA
+
+// LOCALES
+
+.carousel-item h2 {
+  font-size: $font-large;
+  text-shadow: 2px 2px black;
+}
+
+.carousel-item p {
+  font-size: $font-medium;
+  text-shadow: 2px 2px black;
+}
+
+// FIN LOCALES
+
+// PROMOCIONES
+
+section#promociones h1 {
+  @include flex (row, center, center);
+  margin: 1em;
+  color: black;
+  font-size: $font-large;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.hamburguers_promotions {
+  display: flex;
+  flex-direction: column;
+}
+
+.hamburguers_promotions img {
+  width: 25%;
+}
+
+.promotion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin: 2px;
+}
+
+.promotion h2 {
+  font-size: $font-medium;
+  color: black;
+  margin: auto;
+  width: 25%;
+}
+.promotion p {
+  font-size: $font-small;
+  color: black;
+  margin: 1em;
+  width: 25%;
+}
+
+// FIN DE PROMOCIONES
+
+// FORMULARIO
+
+.sobre_nos {
+  text-align: center;
+  font-size: $font-medium;
+  padding: 5rem;
+  & p {
+   color:black;
+  }
+}
+
+
+
+#formulario {
+  background-color: map-get($color, primary);
+  display: flex;
+  justify-content: center;
+  font-size: $font-small;
+}
+
+#formulario h2 {
+  font-size: $font-medium;
+  padding: 0.5em;
+}
+
+.boxform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+input[type=text], input[type=email] {
+  width: 40rem;
+  font-size: $font-medium;
+  border: 2px solid black;
+  margin: 0.1em 0;
+}
+
+.sex {
+  font-size: $font-small;
+}
+
+textarea {
+  width: 30rem;
+  height: 10em;
+  border: 2px solid black;
+}
+
+input[type=submit], input[type=reset] {
+  border-radius: 10px;
+  padding: 0.5em;
+}
+
+// FIN FORMULARIO
+
+// FOOTER
+
+footer {
+  background-image: url(../img/tramaHeader.png);
+  background-repeat: repeat;
+  background-color: black;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+}
+
+// FOOTER DE INDEX
+
+#myfooter {
+  grid-area: footer;
+  background-image: url(../img/tramaHeader.png);
+  background-color: map-get($color, secondary);
+  color: $text-color-tertiary;
+}
+
+// FOOTER DE MENU-LOCALES-PROMOCIONES-CONTACTO
+
+#myfooter2 h2 {
+  margin-top: 3rem;
+  padding: 0 5rem;
+  color: map-get($color, tertiary);
+}
+
+.logo_work {
+  margin: 3rem;
+  @include flex (row, space-around, center);
+}
+
+.logo_work2 {
+  margin: 0 3rem 3rem 3rem;
+  @include flex (row, space-around, center);
+}
+
+.logo_footer {
+  padding: 1em;
+  width: 15rem;
+}
+
+.workwithus {
+  @include flex (column, center, center);
+
+  h2 {
+    font-size: $font-medium;
+  }
+
+  p {
+    font-size: $font-small;
+  }
+}
+
+.btn-primary {
+  @extend .btn-primary;
+  font-size: $font-small;
+  border: 2px solid map-get($color, primary);
+  padding: 1rem;
+  background-color: map-get($color, secondary);
+
+  &:hover {
+    background-color: map-get($color, primary);
+    color: map-get($color, secondary);
+    border: 2px solid map-get($color, primary);
+  }
+}
+
+.socialsc {
+  @include flex (row, space-around, center);
+}
+
+.socialicon a {
+  @include flex (none, center, center);
+
+  &:hover {
+    transform: scale(1.10);
+    transition: all 1s;
+  }
+}
+
+.socialsc img {
+  width: 4rem;
+}
+
+// FIN FOOTER
+
+// MEDIA-QUERYS
+
+@media screen and (min-width:576px) and (max-width:767px) {
+
+  .logo_header, .logo_footer {
+    width: 12.5rem;
+    padding: 1em;
+    margin: 2em;
+  }
+
+  .hamburguers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .carousel-item h2 {
+    font-size: $font-medium;
+    text-shadow: 2px 2px black;
+  }
+  
+  .carousel-item p {
+    font-size: $font-small;
+    text-shadow: 2px 2px black;
+  }
+
+  // input[type=text], input[type=email] {
+  //   width: 20%;
+  //   font-size: $font-medium;
+  //   border: 2px solid black;
+  //   margin: 0.1em 0;
+  // }
+  
+  // .sex {
+  //   font-size: $font-small;
+  // }
+  
+  // textarea {
+  //   width: 15%;
+  //   height: 5em;
+  //   border: 2px solid black;
+  // }
+  
+  // input[type=submit], input[type=reset] {
+  //   border-radius: 10px;
+  //   padding: 0.5em;
+  // }
+}
+
+@media screen and (min-width:361px) and (max-width:575px) {
+
+  .logo_header, .logo_footer {
+    width: 10rem;
+    padding: 1em;
+    margin: 2em;
+  }
+
+  .hamburguers {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .carousel-item h2 {
+    font-size: $font-medium;
+    text-shadow: 2px 2px black;
+  }
+  
+  .carousel-item p {
+    font-size: $font-small;
+    text-shadow: 2px 2px black;
+  }
+
+  .sobre_nos {
+    font-size: 2rem;
+  }
+
+  input[type=text], input[type=email] {
+    width: 25rem;
+    font-size: $font-small;
+    border: 2px solid black;
+    margin: 0.1em 0;
+  }
+
+  .sex {
+    font-size: $font-xsmall;
+  }
+  
+  textarea {
+    width: 20rem;
+    height: 10rem;
+    border: 2px solid black;
+  }
+  
+  input[type=submit], input[type=reset] {
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (min-width:0px) and (max-width:360px) {
+
+  .logo_header, .logo_footer {
+    width: 9rem;
+    padding: 1em;
+    margin: 2em;
+  }
+
+  .hamburguers {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+    margin: 0 10em 10em 10em;
+  }
+
+  .carousel-item h2 {
+    font-size: $font-small;
+    text-shadow: 2px 2px black;
+  }
+  
+  .carousel-item p {
+    font-size: $font-xsmall;
+    text-shadow: 2px 2px black;
+  }
+
+  .sobre_nos {
+    font-size: $font-small;
+  }
+
+  #formulario h2 {
+    font-size: $font-small;
+  }
+
+  input[type=text], input[type=email] {
+    width: 20rem;
+    font-size: $font-small;
+    border: 2px solid black;
+    margin: 0.1em 0;
+  }
+
+  .sex {
+    font-size: $font-xsmall;
+  }
+  
+  textarea {
+    width: 15rem;
+    height: 8rem;
+    border: 2px solid black;
+  }
+  
+  input[type=submit], input[type=reset] {
+    border-radius: 10px;
+    padding: 0.5em;
+  }
+
+  .workwithus p {
+    font-size: $font-small;
+  }
+
+  .workwithus p {
+    font-size: $font-xsmall;
+  }
+
+
+
+}
