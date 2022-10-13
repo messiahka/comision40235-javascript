@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "nombre": "Mini",
+      "precio": 700,
+      "imagen": "./img/Mini.png"
+    },
+    {
+      "id": 2,
+      "nombre": "Mini Con Queso",
+      "precio": 800,
+      "imagen": "./img/MiniconQueso.png"
+    },
+    {
+      "id": 3,
+      "nombre": "La Clásica de Siempre",
+      "precio": 1000,
+      "imagen": "./img/ClasicaSimple.png"
+    },
+    {
+      "id": 4,
+      "nombre": "La Clásica pero DOBLE",
+      "precio": 1200,
+      "imagen": "./img/ClasicaDoble.png"
+    },
+    {
+      "id": 5,
+      "nombre": "Torre de Queso",
+      "precio": 1200,
+      "imagen": "./img/FullCheddar.png"
+    },
+    {
+      "id": 6,
+      "nombre": "Bacon Extremo",
+      "precio": 1200,
+      "imagen": "./img/BaconFull.png"
+    },
+    {
+      "id": 7,
+      "nombre": "Tuttita Simple",
+      "precio": 1200,
+      "imagen": "./img/TuttitaSimple.png"
+    },
+    {
+      "id": 8,
+      "nombre": "Tuttita Doble",
+      "precio": 1500,
+      "imagen": "./img/TuttitaSuperDoble.png"
+    },
+    {
+      "id": 9,
+      "nombre": "Tuttita Triple",
+      "precio": 1800,
+      "imagen": "./img/TuttitaSuperTriple.png"
+    }
+  ]

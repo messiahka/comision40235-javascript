@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="navbar">
+        <h2 class="neon">
+            <a href="../index.html" style="color: white">Hamburguesas Tuttita</a>
+        </h2>
+        
+    </div>
+    <main class="payment-container row">
+        <section id="customer" class="customer">
+            <div class="col-12 checkout-container">
+                <div class="container" style="margin-bottom: 15px;">
+                    <form class="" action="">
+                        <div class="dirDeFact col-lg-6 col-md-12">
+                            <h3>Direccion de facturacion</h3><hr>
+                            <div class="fn-container">
+                                <label for="nombrecompleto">Nombre completo:</label>
+                                <input required type="text" name="nombrecompleto" id="nombrecompleto" placeholder="Nombre y apellido"
+                                    maxlength="20">
+                            </div>
+                            <div class="email-container">
+                                <label for="email">Email:</label>
+                                <input required type="email" name="email" id="email" placeholder="ejemplo@gmail.com">
+                            </div>
+                            <div class="direc-container">
+                                <label for="direccion">Direccion:</label>
+                                <input required type="text" name="direccion" id="address" placeholder="Calle falsa 123">
+                            </div>
+                            <div class="ciudad-container">
+                                <label for="ciudad">Ciudad:</label>
+                                <input required type="text" name="ciudad" id="city" placeholder="Gualeguaychú">
+                            </div>
+                            <div class="pv-cp-container d-flex">
+                                <div class="provincia-container">
+                                    <label for="provincia">Provincia:</label>
+                                    <input required type="text" name="provincia" id="province" placeholder="Buenos Aires">
+                                </div>
+                                <div class="cp-container">
+                                    <label for="cp">Codigo postal:</label>
+                                    <input required type="text" name="cp" id="cp" placeholder="6700" minlength="4"
+                                        maxlength="5">
+                                       
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="checkout-btn col-12 gx-0">
+                            <input type="submit" value="FINALIZAR COMPRA" id="checkout"> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+       
+    </main>
+    <script src="../js/app2.js"></script>
+</body>
+</html>
